@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#001327"
+    tools:context=".PhotoFragment">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <io.alterac.blurkit.BlurLayout
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="15dp"
+            app:blk_cornerRadius="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="15dp"
+                android:src="@drawable/ic_back" />
+        </io.alterac.blurkit.BlurLayout>
+
+        <io.alterac.blurkit.BlurLayout
+            android:id="@+id/share"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="15dp"
+            app:blk_cornerRadius="30dp"
+            app:layout_constraintRight_toLeftOf="@id/info"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="13dp"
+                android:src="@drawable/ic_share" />
+        </io.alterac.blurkit.BlurLayout>
+
+        <io.alterac.blurkit.BlurLayout
+            android:id="@+id/info"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="15dp"
+            app:blk_cornerRadius="30dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="11dp"
+                android:src="@drawable/ic_info" />
+        </io.alterac.blurkit.BlurLayout>
+
+        <io.alterac.blurkit.BlurLayout
+            android:id="@+id/download"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="15dp"
+            app:blk_cornerRadius="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                android:src="@drawable/ic_download" />
+        </io.alterac.blurkit.BlurLayout>
+
+        <io.alterac.blurkit.BlurLayout
+            android:id="@+id/what"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:blk_cornerRadius="30dp"
+            app:layout_constraintBottom_toBottomOf="@id/download"
+            app:layout_constraintLeft_toRightOf="@id/download"
+            app:layout_constraintRight_toLeftOf="@id/effect"
+            app:layout_constraintTop_toTopOf="@id/download">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                android:src="@drawable/ic_what" />
+        </io.alterac.blurkit.BlurLayout>
+
+        <io.alterac.blurkit.BlurLayout
+            android:id="@+id/effect"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:blk_cornerRadius="30dp"
+            app:layout_constraintBottom_toBottomOf="@id/like"
+            app:layout_constraintLeft_toRightOf="@id/what"
+            app:layout_constraintRight_toLeftOf="@id/like"
+            app:layout_constraintTop_toTopOf="@id/like">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                android:src="@drawable/ic_effect" />
+        </io.alterac.blurkit.BlurLayout>
+
+        <io.alterac.blurkit.BlurLayout
+            android:id="@+id/like"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="15dp"
+            app:blk_cornerRadius="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <ImageView
+                android:id="@+id/likes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="15dp"
+                android:src="@drawable/like" />
+        </io.alterac.blurkit.BlurLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
